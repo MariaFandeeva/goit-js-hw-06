@@ -8,7 +8,7 @@ const onSubmitHandler = (event) => {
   } = event.currentTarget;
 
   if (email.value === "" || password.value === "") {
-    return aleret(`Please enter email and password`);
+    return alert(`Please enter email and password`);
   }
   const dataEl = {
     email: email.value,
