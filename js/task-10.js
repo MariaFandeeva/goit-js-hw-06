@@ -39,4 +39,5 @@ function createBoxes(amount) {
 ref.btnDestroy.addEventListener(`click`, destroyBox);
 function destroyBox() {
   boxesEl.innerHTML = "";
+  ref.input.value = "";
 }
