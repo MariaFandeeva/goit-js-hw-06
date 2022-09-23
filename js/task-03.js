@@ -17,7 +17,7 @@ const ulList = document.querySelector("ul");
 const imgEls = images
   .map(
     ({ url, alt }) =>
-      `<li class = 'item'><img src= ${url} alt= ${alt} width = '300' height = '200'></li>`
+      `<li class = 'item'><img src= '${url}' alt= '${alt}' width = '300' height = '200'></li>`
   )
   .join("");
 

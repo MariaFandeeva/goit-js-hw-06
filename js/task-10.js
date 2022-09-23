@@ -24,12 +24,12 @@ function createBoxes(amount) {
 
   const elements = [];
 
-  for (let i = 0; i < amount; i += 1) {
+  for (let i = 0; i < Number(ref.input.value); i += 1) {
     const divEl = document.createElement(`div`);
     divEl.classList.add(`box`);
     divEl.style.backgroundColor = getRandomHexColor();
-    divEl.style.height = height + difference + `px`;
-    divEl.style.width = width + difference + `px`;
+    divEl.style.height = `${i * difference + 30}px`;
+    divEl.style.width = `${i * difference + 30}px`;
 
     difference += 10;
     elements.push(divEl);
