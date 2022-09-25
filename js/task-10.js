@@ -16,22 +16,21 @@ function onClickInput(event) {
   const newBox = Number(ref.input.value);
   createBoxes(newBox);
 }
+let width = 30;
+let height = 30;
 
 function createBoxes(amount) {
-  const width = 30;
-  const height = 30;
-  let difference = 0;
-
   const elements = [];
 
   for (let i = 0; i < Number(ref.input.value); i += 1) {
     const divEl = document.createElement(`div`);
     divEl.classList.add(`box`);
     divEl.style.backgroundColor = getRandomHexColor();
-    divEl.style.height = `${i * difference + 30}px`;
-    divEl.style.width = `${i * difference + 30}px`;
 
-    difference += 10;
+    divEl.style.height = `${height}px`;
+    divEl.style.width = `${width}px`;
+    width = width + 10;
+    height = height + 10;
     elements.push(divEl);
   }
   boxesEl.append(...elements);
